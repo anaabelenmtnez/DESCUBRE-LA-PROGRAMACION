@@ -1,0 +1,26 @@
+void main () {
+animate (ejecutar);
+}
+void ejecutar(){
+
+  control();
+  imagen();
+}
+void imagen(){
+  rect(120,120,80,80);
+}
+ void control(){
+  background(8,160,243);
+  println ("X: " + mouseX);
+  println ("Y: " + mouseY);
+  if (mousePressed) {
+    if (mouseButton == LEFTBUTTON){
+      if (mouseX > 120 && mouseX < 200 || mouseY > 120 && mouseY < 200) {
+        background(245,8,8);
+        ellipse(mouseX, mouseY, 50, 50);
+        
+}
+        
+      }}
+      }
+    
