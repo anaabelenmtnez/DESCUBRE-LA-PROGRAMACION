@@ -1,0 +1,16 @@
+void main() {
+  animate(temporizador);
+}
+
+void temporizador(){
+  println (millis());
+
+if (millis()>5000){
+  background(241,136,146);
+}}
+  
+while (millis()>5001);
+	println("Números generados: " + generados);
+	if (encontrado == true) {
+		println("Al menos uno fue par");
+	}
