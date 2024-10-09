@@ -6,18 +6,22 @@ void ejecutar(){
   control();
   imagen();
 }
-void imagen(){
-  rect(120,120,80,80);
+void imagen (){
+  fill(239,108,145);
+  rect (120,120,80,80);
+  fill(38,35,35);
+  text ("PLAY", 137,170);
 }
+
  void control(){
-  background(8,160,243);
+  background(239,243,245);
   println ("X: " + mouseX);
   println ("Y: " + mouseY);
   if (mousePressed) {
     if (mouseButton == LEFTBUTTON){
-      if (mouseX > 120 && mouseX < 200 || mouseY > 120 && mouseY < 200) {
-        background(245,8,8);
-        ellipse(mouseX, mouseY, 50, 50);
+      if (mouseX > 120 && mouseX < 200 &&  mouseY > 120 && mouseY < 200) {
+        background(182,249,169);
+       
         
 }
         
