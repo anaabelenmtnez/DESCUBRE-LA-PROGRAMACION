@@ -1,0 +1,54 @@
+void main () {
+animate (menu);
+}
+void menu(){
+
+  controlBTN1();
+  imagenBTN1();
+}
+void imagenBTN1 (){
+  fill(239,108,145);
+  rect (120,120,80,80);
+  fill(38,35,35);
+  text ("PLAY", 137,170);
+}
+
+ void controlBTN1(){
+  background(239,243,245);
+  println ("X: " + mouseX);
+  println ("Y: " + mouseY);
+  if (mousePressed) {
+    if (mouseButton == LEFTBUTTON){
+      if (mouseX > 120 && mouseX < 200 &&  mouseY > 120 && mouseY < 200) {
+        background(182,249,169);
+       animate(play);
+      }}}}    
+
+void imagenEXIT (){
+  fill(239,108,145);
+  rect (17,02,30,17);
+  fill(38,35,35);
+  text ("exit", 17,17);
+}
+
+ void controlEXIT(){
+ // background(239,243,245);
+  println ("X: " + mouseX);
+  println ("Y: " + mouseY);
+  if (mousePressed) {
+    if (mouseButton == LEFTBUTTON){
+      if (mouseX > 17 && mouseX < 47 &&  mouseY > 2 && mouseY < 49) {
+        background(182,249,169);
+       animate(menu);
+      }}}}
+
+void play(){
+  background(221,186,251);
+  imagenEXIT ();
+  controlEXIT();
+  if (mousePressed){}
+  if (mouseButton == LEFTBUTTON){
+    ellipse (10,10,10,10);
+  }
+}
+        
