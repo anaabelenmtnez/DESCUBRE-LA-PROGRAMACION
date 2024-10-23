@@ -5,13 +5,16 @@ void menu(){
 
   controlBTN1();
   imagenBTN1();
+  controlBTN2 ();
+  imagenBTN2 ();
 }
 void imagenBTN1 (){
   fill(239,108,145);
   rect (120,120,80,80);
   fill(38,35,35);
   text ("PLAY", 137,170);
-  
+}
+void imagenBTN2 (){ 
   fill(247,224,231);
   rect (10,15,55,20);
   fill(38,35,35);
@@ -28,17 +31,17 @@ void imagenBTN1 (){
       if (mouseX > 120 && mouseX < 200 &&  mouseY > 120 && mouseY < 200) {
         background(182,249,169);
        animate(play);
-        
-
-       background(178,220,241);
+      }}}}
+void controlBTN2 () {
+       
   println ("X: " + mouseX);
   println ("Y: " + mouseY);
   if (mousePressed) {
     if (mouseButton == LEFTBUTTON){
-      if (mouseX > 10 && mouseX < 95 &&  mouseY > 15 && mouseY < 95) {
+      if (mouseX > 10 && mouseX < 65 &&  mouseY > 15 && mouseY < 35) {
         background(182,249,169);
-       animate(menu);
-      }}}}}}}   
+       animate(MENU);
+      }}}}
 
 void imagenEXIT (){
   fill(239,108,145);
@@ -67,11 +70,16 @@ void play(){
     ellipse (10,10,10,10);
   }
 }
-        void controlmenu1(){
-          background(238,241,204);
+        void MENU(){
+          background(246,249,211);
+          imagenEXIT ();
+  controlEXIT();
+  if (mousePressed){}
+  if (mouseButton == LEFTBUTTON){
+    ellipse (10,10,10,10);
        
   
- 
+  }
   }
 
         
