@@ -7,6 +7,8 @@ void menu(){
   imagenBTN1();
   controlBTN2 ();
   imagenBTN2 ();
+  controlBTN3 ();
+  imagenBTN3 ();
 }
 void imagenBTN1 (){
   fill(239,108,145);
@@ -20,6 +22,13 @@ void imagenBTN2 (){
   fill(38,35,35);
   text ("menu", 15,30);
   
+}
+
+void imagenBTN3 (){ 
+  fill(247,224,231);
+  rect (247,15,60,20);
+  fill(38,35,35);
+  text ("credits", 250,30);
 }
 
  void controlBTN1(){
@@ -41,6 +50,17 @@ void controlBTN2 () {
       if (mouseX > 10 && mouseX < 65 &&  mouseY > 15 && mouseY < 35) {
         background(182,249,169);
        animate(MENU);
+      }}}}
+
+void controlBTN3 () {
+       
+  println ("X: " + mouseX);
+  println ("Y: " + mouseY);
+  if (mousePressed) {
+    if (mouseButton == LEFTBUTTON){
+      if (mouseX > 247 && mouseX < 307 &&  mouseY > 15 && mouseY < 35) {
+        background(225,249,221);
+       animate(credit);
       }}}}
 
 void imagenEXIT (){
@@ -77,9 +97,25 @@ void play(){
   if (mousePressed){}
   if (mouseButton == LEFTBUTTON){
     ellipse (10,10,10,10);
+    text ("OBJETIVO:llegar a las recompesas", 05, 70);
+    text ("para subir de nivel.", 05, 90);
+    text ("INSTRUCCIONES DEL JUEGO:", 05, 130);
+    text ("-Si tu player toca las esquinas,", 05, 170);
+    text ("este volvera al punto incial.",10,190);
+    text ("-Persigue los puntos aleatorios que", 05, 220);
+    text ("se presentan en la pantalla.", 10, 240);
+    
+  }
+  }
+void credit (){
+   background(246,249,211);
+          imagenEXIT ();
+  controlEXIT();
+  if (mousePressed){}
+  if (mouseButton == LEFTBUTTON){
+    ellipse (10,10,10,10);  
+    text("by Ana Belén Martínez Cascales", 30,130);
        
-  
   }
-  }
-
+}
         
