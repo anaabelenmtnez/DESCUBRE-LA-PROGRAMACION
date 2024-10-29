@@ -1,0 +1,161 @@
+int x= 160;
+int y= 160;
+
+void main () {
+animate (menu);
+}
+void menu(){
+
+  controlBTN1();
+  imagenBTN1();
+  controlBTN2 ();
+  imagenBTN2 ();
+  controlBTN3 ();
+  imagenBTN3 ();
+}
+void imagenBTN1 (){
+  fill(239,108,145);
+  rect (120,120,80,80);
+  fill(38,35,35);
+  text ("PLAY", 137,170);
+}
+void imagenBTN2 (){ 
+  fill(247,224,231);
+  rect (10,15,55,20);
+  fill(38,35,35);
+  text ("menu", 15,30);
+  
+}
+
+void imagenBTN3 (){ 
+  fill(247,224,231);
+  rect (247,15,60,20);
+  fill(38,35,35);
+  text ("credits", 250,30);
+}
+
+ void controlBTN1(){
+  background(239,243,245);
+  println ("X: " + mouseX);
+  println ("Y: " + mouseY);
+  if (mousePressed) {
+    if (mouseButton == LEFTBUTTON){
+      if (mouseX > 120 && mouseX < 200 &&  mouseY > 120 && mouseY < 200) {
+        background(182,249,169);
+       animate(play);
+      }}}}
+void controlBTN2 () {
+       
+  println ("X: " + mouseX);
+  println ("Y: " + mouseY);
+  if (mousePressed) {
+    if (mouseButton == LEFTBUTTON){
+      if (mouseX > 10 && mouseX < 65 &&  mouseY > 15 && mouseY < 35) {
+        background(182,249,169);
+       animate(MENU);
+      }}}}
+
+void controlBTN3 () {
+       
+  println ("X: " + mouseX);
+  println ("Y: " + mouseY);
+  if (mousePressed) {
+    if (mouseButton == LEFTBUTTON){
+      if (mouseX > 247 && mouseX < 307 &&  mouseY > 15 && mouseY < 35) {
+        background(225,249,221);
+       animate(credit);
+      }}}}
+
+void imagenEXIT (){
+  fill(239,108,145);
+  rect (17,02,30,17);
+  fill(38,35,35);
+  text ("exit", 17,17);
+} 
+
+ void controlEXIT(){
+ // background(239,243,245);
+  println ("X: " + mouseX);
+  println ("Y: " + mouseY);
+  if (mousePressed) {
+    if (mouseButton == LEFTBUTTON){
+      if (mouseX > 17 && mouseX < 47 &&  mouseY > 2 && mouseY < 49) {
+        background(182,249,169);
+       animate(menu);
+      }}}}
+
+void play(){
+  background(221,186,251);
+  imagenEXIT ();
+  controlEXIT();
+  if (mousePressed){}
+  if (mouseButton == LEFTBUTTON){
+    ellipse (10,10,10,10);
+    animate (ejecutar);
+  }
+}
+        void MENU(){
+          background(246,249,211);
+          imagenEXIT ();
+  controlEXIT();
+  if (mousePressed){}
+  if (mouseButton == LEFTBUTTON){
+    ellipse (10,10,10,10);
+    text ("OBJETIVO:llegar a las recompesas", 05, 70);
+    text ("para subir de nivel.", 05, 90);
+    text ("INSTRUCCIONES DEL JUEGO:", 05, 130);
+    text ("-Si tu player toca las esquinas,", 05, 170);
+    text ("este volvera al punto incial.",10,190);
+    text ("-Persigue los puntos aleatorios que", 05, 220);
+    text ("se presentan en la pantalla.", 10, 240);
+    
+  }
+  }
+void ejecutar(){
+  player();
+  controles();
+}
+void credit (){
+   background(246,249,211);
+          imagenEXIT ();
+  controlEXIT();
+  if (mousePressed){}
+  if (mouseButton == LEFTBUTTON){
+    ellipse (10,10,10,10);  
+    text("by Ana Belén Martínez Cascales", 30,130);
+       
+  }
+}
+        void player(){
+  background(176,223,249);
+  ellipse(x,y,10,15);
+}
+void controles(){
+  if (keyPressed && key=="up"){
+    println("arriba");
+  y = y -1;
+}
+ if (keyPressed && key=="down"){
+    println("abajo");
+  y = y +1;
+}
+ if (keyPressed && key=="left"){
+   println("izquierda");
+   x = x -1;
+}
+ if (keyPressed && key=="right"){
+    println("derecha");
+  x = x +1;
+ }
+  if (x==0) {
+    x=120;
+  }
+  if (y==0) {
+    y=120;
+  }
+  if (x==320) {
+    x=120;
+  }
+  if (y==320) {
+    y=120;
+  } }
