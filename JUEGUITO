@@ -1,5 +1,7 @@
 int x= 160;
 int y= 160;
+int z= random (320);
+int t= random (320);
 
 void main () {
 animate (menu);
@@ -114,6 +116,7 @@ void play(){
 void ejecutar(){
   player();
   controles();
+  enemigo();
 }
 void credit (){
    background(246,249,211);
@@ -129,23 +132,24 @@ void credit (){
         void player(){
   background(176,223,249);
   ellipse(x,y,10,15);
+          fill(251,51,51);
 }
 void controles(){
   if (keyPressed && key=="up"){
     println("arriba");
-  y = y -1;
+  y = y -3;
 }
  if (keyPressed && key=="down"){
     println("abajo");
-  y = y +1;
+  y = y +3;
 }
  if (keyPressed && key=="left"){
    println("izquierda");
-   x = x -1;
+   x = x -3;
 }
  if (keyPressed && key=="right"){
     println("derecha");
-  x = x +1;
+  x = x +3;
  }
   if (x==0) {
     x=120;
@@ -159,3 +163,24 @@ void controles(){
   if (y==320) {
     y=120;
   } }
+
+void enemigo (){
+  ellipse (z,t,20,20);
+  fill(27,28,26);
+  
+  z= z+1;
+  t= t +1;
+  
+  if (z<0) {
+    x=10;
+  }
+  if (t<0) {
+    t=10;
+  }
+  if (z>320) {
+    z=10;
+  }
+  if (t>320) {
+    t=10;
+  } }
+
