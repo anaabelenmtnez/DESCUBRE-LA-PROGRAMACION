@@ -182,5 +182,13 @@ void enemigo (){
   }
   if (t>320) {
     t=10;
-  } }
+
+    } }
+//PUNTOS
+
+int puntos=0;
+void puntuacion(){
+  fill(4,0,0);
+  text ("0 points", 10,20);
+}
 
