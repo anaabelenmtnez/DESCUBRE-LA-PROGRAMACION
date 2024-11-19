@@ -117,6 +117,7 @@ void ejecutar(){
   player();
   controles();
   enemigo();
+puntuacion();
 }
 void credit (){
    background(246,249,211);
