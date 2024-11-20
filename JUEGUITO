@@ -2,6 +2,7 @@ int x= 160;
 int y= 160;
 int z= random (320);
 int t= random (320);
+int t1= second ();
 
 void main () {
 animate (menu);
@@ -190,6 +191,29 @@ void enemigo (){
 int puntos=0;
 void puntuacion(){
   fill(4,0,0);
-  text ("0 points", 10,20);
-}
+  text ("PUNTOS:"+puntos, 10,20);
+  if (x-10<t && x+10>t){
+    puntos = puntos+10;
+  
+if (y-10<t && y+10<t){
+  puntos=puntos+10;
+}}
+if(puntos == 1000){
+  animate (winner);
+}}
 
+//WINNER
+void winner (){
+  background(131,251,91);
+    text ("WINNER!!!", 120,150);
+  fill(0,0,0);
+}  
+
+//LOSER
+void loser(){
+  background(245,64,64);
+text ("YOU LOSE", 120,120);
+  fill(0,0,0);
+
+
+}
