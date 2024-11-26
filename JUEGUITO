@@ -2,7 +2,9 @@ int x= 160;
 int y= 160;
 int z= random (320);
 int t= random (320);
-int t1= second ();
+int t1= millis ()/1000;
+ int a = t1 - millis()/1000;
+
 
 void main () {
 animate (menu);
@@ -94,6 +96,7 @@ void play(){
   if (mousePressed){}
   if (mouseButton == LEFTBUTTON){
     ellipse (10,10,10,10);
+    
     animate (ejecutar);
   }
 }
@@ -119,6 +122,7 @@ void ejecutar(){
   controles();
   enemigo();
 puntuacion();
+  println(a);
 }
 void credit (){
    background(246,249,211);
@@ -202,18 +206,22 @@ if(puntos == 1000){
   animate (winner);
 }}
 
+if (a==10 && puntos<1000){
+  animate (loser);
+}
+
 //WINNER
 void winner (){
-  background(131,251,91);
+  background(136,251,97);
     text ("WINNER!!!", 120,150);
   fill(0,0,0);
 }  
 
 //LOSER
 void loser(){
-  background(245,64,64);
+  background(237,66,66);
 text ("YOU LOSE", 120,120);
   fill(0,0,0);
-
+  
 
 }
