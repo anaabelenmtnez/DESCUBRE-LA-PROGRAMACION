@@ -107,13 +107,16 @@ void play(){
   if (mousePressed){}
   if (mouseButton == LEFTBUTTON){
     ellipse (10,10,10,10);
-    text ("OBJETIVO:llegar a las recompesas", 05, 70);
-    text ("para subir de nivel.", 05, 90);
-    text ("INSTRUCCIONES DEL JUEGO:", 05, 130);
-    text ("-Si tu player toca las esquinas,", 05, 170);
-    text ("este volvera al punto incial.",10,190);
-    text ("-Persigue los puntos aleatorios que", 05, 220);
-    text ("se presentan en la pantalla.", 10, 240);
+    text ("OBJETIVO:llegar a las recompesas", 05, 50);
+    text ("para subir de nivel.", 05, 70);
+    text ("INSTRUCCIONES DEL JUEGO:", 05, 100);
+    text ("-Si tu player toca las esquinas,", 05, 130);
+    text ("este volvera al punto incial.",10,150);
+    text ("-Persigue los puntos aleatorios que", 05, 180);
+    text ("se presentan en la pantalla.", 10, 200);
+    text ("*Deberas esperar unos segundos", 10, 240);
+    text ("para que los puntos obtenidos",10,260);
+    text ("aparezcan en tu puntuacion", 10, 280);
     
   }
   }
@@ -123,6 +126,7 @@ void ejecutar(){
   enemigo();
 puntuacion();
   println(a);
+  
 }
 void credit (){
    background(246,249,211);
@@ -206,7 +210,7 @@ if(puntos == 1000){
   animate (winner);
 }}
 
-if (a==10 && puntos<1000){
+if (a==-60 && puntos<1000){
   animate (loser);
 }
 
